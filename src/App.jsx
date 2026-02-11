@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, XAxis, YAxis, Tooltip, CartesianGrid, Legend, AreaChart, Area, ComposedChart } from "recharts";
-import { Search, Filter, Download, ChevronRight, ChevronLeft, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, XCircle, Eye, BarChart3, Target, Users, FileText, ArrowUpRight, ArrowDownRight, Zap, Shield, Activity, Layers, Clock, Building2, CreditCard, FileCheck, AlertOctagon, ChevronDown, X, Home, Grid3x3, UserCheck, GitCompare, Flag, Menu } from "lucide-react";
+import { Search, Filter, Download, ChevronRight, ChevronLeft, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, XCircle, Eye, BarChart3, Target, Users, FileText, ArrowUpRight, ArrowDownRight, Zap, Shield, Activity, Layers, Clock, Building2, CreditCard, FileCheck, AlertOctagon, ChevronDown, X, Home, LayoutGrid, GitMerge, Flag, Menu } from "lucide-react";
 
 // ============================================================
 // MOCK DATA GENERATOR
@@ -765,7 +765,7 @@ function CruzamentosPage({ data }) {
     { id: "A", title: "Cartão × PGDAS", desc: "Simples Nacional — Identifica omissão de receita", field: "divA", pctField: "pctA", color: COLORS.orange, icon: Layers, filter: d => d.regime === "Simples" && d.divA != null },
     { id: "B", title: "Cartão × NFS-e", desc: "Todos os regimes — Serviço sem emissão de NF", field: "divB", pctField: "pctB", color: COLORS.danger, icon: AlertTriangle, filter: () => true },
     { id: "C", title: "PGDAS × NFS-e", desc: "Simples Nacional — Declarou mas não emitiu NF", field: "divC", pctField: "pctC", color: COLORS.warning, icon: FileText, filter: d => d.regime === "Simples" && d.divC != null },
-    { id: "D", title: "Cruzamento Triplo", desc: "Maior divergência entre as 3 bases", field: "divD", pctField: "pctD", color: COLORS.purple, icon: Grid3x3, filter: () => true },
+    { id: "D", title: "Cruzamento Triplo", desc: "Maior divergência entre as 3 bases", field: "divD", pctField: "pctD", color: COLORS.purple, icon: LayoutGrid, filter: () => true },
     { id: "E", title: "Cartão × NFS-e (Normal)", desc: "Regime Normal — Base de cálculo omitida", field: "divE", pctField: "pctE", color: COLORS.cyan, icon: Building2, filter: d => d.regime === "Normal" && d.divE != null },
   ];
 
@@ -1133,10 +1133,10 @@ export default function App() {
 
   const navItems = [
     { id: "dashboard", icon: Home, label: "Dashboard" },
-    { id: "malha", icon: Grid3x3, label: "Malha Fiscal" },
+    { id: "malha", icon: LayoutGrid, label: "Malha Fiscal" },
     { id: "cruzamentos", icon: Layers, label: "Cruzamentos" },
     { id: "recuperacao", icon: TrendingUp, label: "Recuperação" },
-    { id: "comparativo", icon: GitCompare, label: "Comparativo" },
+    { id: "comparativo", icon: GitMerge, label: "Comparativo" },
     { id: "metas", icon: Target, label: "Metas" },
   ];
 
